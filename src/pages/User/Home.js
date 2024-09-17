@@ -19,8 +19,8 @@ function Home() {
     const [Title, setTitle] = useState('')
     const [showAll, setShowAll] = useState(false); 
     const [Description, setDescription] = useState('')
-    const base_url = 'http://passgen.gearpross.shop/'
-    // const base_url ='http://127.0.0.1:8000/'
+    const base_url = 'http://passgen.gearpross.shop'
+    // const base_url ='http://127.0.0.1:8000'
     
 
 

@@ -7,8 +7,8 @@ function Login() {
     const [Email, setEmail] = useState('')
     const [Password, setPassword] = useState('')
     const navigate = useNavigate();
-    const base_url = 'http://passgen.gearpross.shop/'
-    // const base_url ='http://127.0.0.1:8000/'
+    const base_url = 'http://passgen.gearpross.shop'
+    // const base_url ='http://127.0.0.1:8000'
 
     const submitHandle = () => {
         console.log(Email, Password);

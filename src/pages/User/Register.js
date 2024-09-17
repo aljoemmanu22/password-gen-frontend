@@ -8,8 +8,8 @@ function Register() {
     const [emailChecker, setEmailChecker] = useState(false)
     const [usernameChecker, setUsernameChecker] = useState(false)
     let timeoutId;
-    const base_url = 'http://passgen.gearpross.shop/'
-    // const base_url ='http://127.0.0.1:8000/'
+    const base_url = 'http://passgen.gearpross.shop'
+    // const base_url ='http://127.0.0.1:8000'
 
     const handleSubmit = async (res) => {
         res.preventDefault()
