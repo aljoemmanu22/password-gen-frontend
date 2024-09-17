@@ -8,12 +8,13 @@ function Register() {
     const [emailChecker, setEmailChecker] = useState(false)
     const [usernameChecker, setUsernameChecker] = useState(false)
     let timeoutId;
+    base_url = 'http://passgen.gearpross.shop/'
 
     const handleSubmit = async (res) => {
         res.preventDefault()
 
         const formData = new FormData(res.target)
-        await UserAxios.post('/register', formData).then((res) => {
+        await UserAxios.post(`${base_url}/register`, formData).then((res) => {
             navigate('/login')
         }).catch((err) => {
             console.log(err);

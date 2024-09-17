@@ -19,12 +19,13 @@ function Home() {
     const [Title, setTitle] = useState('')
     const [showAll, setShowAll] = useState(false); 
     const [Description, setDescription] = useState('')
+    base_url = 'http://passgen.gearpross.shop/'
     
 
 
 const fetch_list=()=>{
     if(Access){
-        UserAxios.get(`/note/list/${jwtDecode(Access).user_id}`, {
+        UserAxios.get(`${base_url}/note/list/${jwtDecode(Access).user_id}`, {
             headers:{
                 Authorization: `Bearer ${Access}`,
             }
@@ -53,7 +54,7 @@ useEffect(()=>{
             description:Description,
             user:jwtDecode(Access).user_id
         }
-        await AuthUserAxios.post('/note/create', formData).then((res)=>{
+        await AuthUserAxios.post('${base_url}/note/create', formData).then((res)=>{
             console.log(res);
             fetch_list()
             setTitle('')

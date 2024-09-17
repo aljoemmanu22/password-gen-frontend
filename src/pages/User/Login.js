@@ -7,11 +7,12 @@ function Login() {
     const [Email, setEmail] = useState('')
     const [Password, setPassword] = useState('')
     const navigate = useNavigate();
+    base_url = 'http://passgen.gearpross.shop/'
 
     const submitHandle = () => {
         console.log(Email, Password);
         const formData = {'email':Email, 'password':Password}
-        UserAxios.post('/login',formData).then((res)=>{
+        UserAxios.post(`${base_url}/login`,formData).then((res)=>{
             localStorage.setItem("access", res.data.access);
             localStorage.setItem("refresh", res.data.refresh);
             navigate('/')
